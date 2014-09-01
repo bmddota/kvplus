@@ -1,10 +1,10 @@
 class LevelScalingModifierPlugin < Plugin
-	def init()
-		puts "LEVELSCALINGMODIFIERPLUGIN"
-	end
+  def init()
+    puts "LEVELSCALINGMODIFIERPLUGIN"
+  end
 
-	def execute(kvs, options)
-		puts "LEVELSCALINGMODIFIERPLUGIN: execute"
+  def execute(kvs, options)
+    puts "LEVELSCALINGMODIFIERPLUGIN: execute"
     options = options.first
     if(options["Target"])
       options["Target"].each do |path|
@@ -14,7 +14,7 @@ class LevelScalingModifierPlugin < Plugin
       end
     end
     
-	end
+  end
   
   # Recursively search for and replace ApplyModifier blocks, if they're split using spaces
   def replace_scaling_modifiers(root)
